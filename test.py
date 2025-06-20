@@ -76,7 +76,7 @@ class SystemeGestionFoule:
     def __init__(self, root):
         self.root = root
         self.root.title("Système de Gestion de Foule - Stade")
-        self.root.geometry("1400x900")
+        self.root.geometry("1400x980")
         self.root.configure(bg='#2c3e50')
         
         # Variables de contrôle
@@ -155,11 +155,11 @@ class SystemeGestionFoule:
         # Dashboard
         dashboard_label = tk.Label(right_frame, text="📊 TABLEAU DE BORD", 
                                   font=('Arial', 16, 'bold'), fg='white', bg='#34495e')
-        dashboard_label.pack(pady=(10, 20))
+        dashboard_label.pack(pady=(10, 10))
         
         # Compteur de personnes
         self.compteur_frame = tk.Frame(right_frame, bg='#2ecc71', relief='raised', bd=3)
-        self.compteur_frame.pack(pady=10, padx=20, fill='x')
+        self.compteur_frame.pack(pady=5, padx=20, fill='x')
         
         tk.Label(self.compteur_frame, text="👥 NOMBRE DE PERSONNES", 
                 font=('Arial', 12, 'bold'), bg='#2ecc71', fg='white').pack(pady=5)
@@ -170,7 +170,7 @@ class SystemeGestionFoule:
         
         # État de sécurité
         self.etat_frame = tk.Frame(right_frame, bg='#2ecc71', relief='raised', bd=3)
-        self.etat_frame.pack(pady=10, padx=20, fill='x')
+        self.etat_frame.pack(pady=5, padx=20, fill='x')
         
         tk.Label(self.etat_frame, text="🛡️ ÉTAT DE SÉCURITÉ", 
                 font=('Arial', 12, 'bold'), bg='#2ecc71', fg='white').pack(pady=5)
@@ -182,11 +182,11 @@ class SystemeGestionFoule:
         # Alertes
         alertes_label = tk.Label(right_frame, text="  SYSTÈME D'ALERTES", 
                                 font=('Arial', 16, 'bold'), fg='white', bg='#34495e')
-        alertes_label.pack(pady=(30, 10))
+        alertes_label.pack(pady=(20, 10))
         
         # Alerte foule
         self.alerte_foule_frame = tk.Frame(right_frame, bg='#f39c12', relief='raised', bd=3)
-        self.alerte_foule_frame.pack(pady=10, padx=20, fill='x')
+        self.alerte_foule_frame.pack(pady=5, padx=20, fill='x')
         
         self.label_alerte_foule = tk.Label(self.alerte_foule_frame, text="  GESTION DE FOULE\nNORMALE", 
                                           font=('Arial', 12, 'bold'), bg='#f39c12', fg='white')
@@ -194,7 +194,7 @@ class SystemeGestionFoule:
         
         # Alerte arme
         self.alerte_arme_frame = tk.Frame(right_frame, bg='#95a5a6', relief='raised', bd=3)
-        self.alerte_arme_frame.pack(pady=10, padx=20, fill='x')
+        self.alerte_arme_frame.pack(pady=5, padx=20, fill='x')
         
         self.label_alerte_arme = tk.Label(self.alerte_arme_frame, text="  DÉTECTION D'ARMES\nINACTIVE", 
                                          font=('Arial', 12, 'bold'), bg='#95a5a6', fg='white')
@@ -203,7 +203,7 @@ class SystemeGestionFoule:
         # Paramètres
         params_label = tk.Label(right_frame, text="  PARAMÈTRES", 
                                font=('Arial', 14, 'bold'), fg='white', bg='#34495e')
-        params_label.pack(pady=(30, 10))
+        params_label.pack(pady=(20, 10))
         
         # Seuil de foule
         seuil_frame = tk.Frame(right_frame, bg='#34495e')
@@ -364,6 +364,7 @@ class SystemeGestionFoule:
                             'knife': 'COUTEAU',
                             'scissors': 'CISEAUX',
                             'baseball bat': 'BATTE',
+                            'bottle': 'BOUTEILLE',
                             'wine glass': 'VERRE',
                             'cup': 'GOBELET',
                             'hammer': 'MARTEAU',
